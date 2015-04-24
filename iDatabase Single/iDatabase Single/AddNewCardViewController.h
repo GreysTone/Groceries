@@ -1,5 +1,5 @@
 //
-//  OutletViewController.h
+//  AddNewCardViewController.h
 //  iDatabase Single
 //
 //  Created by GreysTone on 4/25/15.
@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Database.h"
 
-@interface OutletViewController : UIViewController
-
-- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
+@interface AddNewCardViewController : UIViewController
 
 @end

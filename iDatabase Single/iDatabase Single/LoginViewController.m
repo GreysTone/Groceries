@@ -24,6 +24,8 @@ extern Database *gtDatabase;
     // Do any additional setup after loading the view.
     gtDatabase = [[Database alloc] init];
     [gtDatabase openDb];
+    gtDatabase.STAT_NOTIFICATION_OPEN = YES;
+    gtDatabase.STAT_WATCH_OPEN = YES;
 }
 
 - (void)didReceiveMemoryWarning {

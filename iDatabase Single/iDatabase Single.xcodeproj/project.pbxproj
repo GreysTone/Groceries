@@ -13,6 +13,7 @@
 		D0D0C4C21AEAAA2100B4EF95 /* OutletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4C11AEAAA2100B4EF95 /* OutletViewController.m */; };
 		D0D0C4C51AEAAA3900B4EF95 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4C41AEAAA3900B4EF95 /* SettingViewController.m */; };
 		D0D0C4C81AEAAA6E00B4EF95 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4C71AEAAA6E00B4EF95 /* HomePageViewController.m */; };
+		D0D0C4CB1AEAC2AA00B4EF95 /* AddNewCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4CA1AEAC2AA00B4EF95 /* AddNewCardViewController.m */; };
 		D0E8318A1AE90246006D088B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E831891AE90246006D088B /* main.m */; };
 		D0E8318D1AE90246006D088B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E8318C1AE90246006D088B /* AppDelegate.m */; };
 		D0E831931AE90246006D088B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E831911AE90246006D088B /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 		D0D0C4C41AEAAA3900B4EF95 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		D0D0C4C61AEAAA6E00B4EF95 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = ../HomePageViewController.h; sourceTree = "<group>"; };
 		D0D0C4C71AEAAA6E00B4EF95 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = ../HomePageViewController.m; sourceTree = "<group>"; };
+		D0D0C4C91AEAC2AA00B4EF95 /* AddNewCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewCardViewController.h; sourceTree = "<group>"; };
+		D0D0C4CA1AEAC2AA00B4EF95 /* AddNewCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewCardViewController.m; sourceTree = "<group>"; };
 		D0E831841AE90246006D088B /* iDatabase Single.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iDatabase Single.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E831881AE90246006D088B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0E831891AE90246006D088B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 				D0E831AD1AE9066F006D088B /* LoginViewController.h */,
 				D0E831AE1AE9066F006D088B /* LoginViewController.m */,
 				D0E831911AE90246006D088B /* Main.storyboard */,
+				D0D0C4C91AEAC2AA00B4EF95 /* AddNewCardViewController.h */,
+				D0D0C4CA1AEAC2AA00B4EF95 /* AddNewCardViewController.m */,
 				D0D0C4C31AEAAA3900B4EF95 /* SettingViewController.h */,
 				D0D0C4C41AEAAA3900B4EF95 /* SettingViewController.m */,
 				D0D0C4C01AEAAA2100B4EF95 /* OutletViewController.h */,
@@ -256,6 +261,7 @@
 				D0D0C4BC1AEAA8CC00B4EF95 /* NewBooksViewController.m in Sources */,
 				D0E8318D1AE90246006D088B /* AppDelegate.m in Sources */,
 				D0D0C4C81AEAAA6E00B4EF95 /* HomePageViewController.m in Sources */,
+				D0D0C4CB1AEAC2AA00B4EF95 /* AddNewCardViewController.m in Sources */,
 				D0D0C4BF1AEAA9F500B4EF95 /* QueryViewController.m in Sources */,
 				D0E831B51AE906F2006D088B /* Database.m in Sources */,
 				D0E8318A1AE90246006D088B /* main.m in Sources */,

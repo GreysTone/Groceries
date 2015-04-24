@@ -12,4 +12,12 @@ extern Database *gtDatabase;
 
 @implementation OutletViewController
 
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue {
+    
+}
+
+- (IBAction)AddNewCard:(id)sender {
+    [self performSegueWithIdentifier:@"AddNewCardSegue" sender:(self)];
+}
+
 @end
