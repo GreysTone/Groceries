@@ -1,14 +1,14 @@
 //
-//  MainViewController.h
+//  NewBooksViewController.h
 //  iDatabase Single
 //
-//  Created by GreysTone on 4/23/15.
+//  Created by GreysTone on 4/25/15.
 //  Copyright (c) 2015 GreysTone. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "Database.h"
 
-@interface MainViewController : UIViewController
+@interface NewBooksViewController : UIViewController
 
 @end

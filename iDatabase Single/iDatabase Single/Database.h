@@ -14,6 +14,8 @@
 }
 
 @property int LoginId;
+@property BOOL STAT_WATCH_OPEN;
+@property BOOL STAT_NOTIFICATION_OPEN;
 
 - (int) openDb;
 

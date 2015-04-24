@@ -32,7 +32,8 @@ extern Database *gtDatabase;
 }
 
 - (IBAction) LoginButtonPressed:(id)sender {
-    
+    //Debug Using
+    [self performSegueWithIdentifier:@"LoginSegue" sender:self];
     //Inquire Password
     NSString *passWord;     //Store Result
     int dbId = 0;
@@ -60,6 +61,7 @@ extern Database *gtDatabase;
     if ([self.PasswordTextField.text isEqualToString:passWord]) {
         NSLog(@"[SUCC] Login & Triger <LoginSegue>");
         gtDatabase.LoginId = dbId;
+        
         [self performSegueWithIdentifier:@"LoginSegue" sender:self];
     }
     else {

@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0D0C4B91AEAA3F000B4EF95 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D0C4B81AEAA3F000B4EF95 /* Media.xcassets */; };
+		D0D0C4BC1AEAA8CC00B4EF95 /* NewBooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4BB1AEAA8CC00B4EF95 /* NewBooksViewController.m */; };
+		D0D0C4BF1AEAA9F500B4EF95 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4BE1AEAA9F500B4EF95 /* QueryViewController.m */; };
+		D0D0C4C21AEAAA2100B4EF95 /* OutletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4C11AEAAA2100B4EF95 /* OutletViewController.m */; };
+		D0D0C4C51AEAAA3900B4EF95 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4C41AEAAA3900B4EF95 /* SettingViewController.m */; };
+		D0D0C4C81AEAAA6E00B4EF95 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4C71AEAAA6E00B4EF95 /* HomePageViewController.m */; };
 		D0E8318A1AE90246006D088B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E831891AE90246006D088B /* main.m */; };
 		D0E8318D1AE90246006D088B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E8318C1AE90246006D088B /* AppDelegate.m */; };
 		D0E831931AE90246006D088B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E831911AE90246006D088B /* Main.storyboard */; };
-		D0E831951AE90246006D088B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E831941AE90246006D088B /* Images.xcassets */; };
 		D0E831981AE90246006D088B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E831961AE90246006D088B /* LaunchScreen.xib */; };
 		D0E831A41AE90246006D088B /* iDatabase_SingleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E831A31AE90246006D088B /* iDatabase_SingleTests.m */; };
 		D0E831AF1AE9066F006D088B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E831AE1AE9066F006D088B /* LoginViewController.m */; };
-		D0E831B21AE90684006D088B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E831B11AE90684006D088B /* MainViewController.m */; };
 		D0E831B51AE906F2006D088B /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E831B41AE906F2006D088B /* Database.m */; };
 		D0E831B71AE90770006D088B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E831B61AE90770006D088B /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
@@ -30,21 +34,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0D0C4B81AEAA3F000B4EF95 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		D0D0C4BA1AEAA8CC00B4EF95 /* NewBooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewBooksViewController.h; sourceTree = "<group>"; };
+		D0D0C4BB1AEAA8CC00B4EF95 /* NewBooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewBooksViewController.m; sourceTree = "<group>"; };
+		D0D0C4BD1AEAA9F500B4EF95 /* QueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryViewController.h; sourceTree = "<group>"; };
+		D0D0C4BE1AEAA9F500B4EF95 /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryViewController.m; sourceTree = "<group>"; };
+		D0D0C4C01AEAAA2100B4EF95 /* OutletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutletViewController.h; sourceTree = "<group>"; };
+		D0D0C4C11AEAAA2100B4EF95 /* OutletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutletViewController.m; sourceTree = "<group>"; };
+		D0D0C4C31AEAAA3900B4EF95 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		D0D0C4C41AEAAA3900B4EF95 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		D0D0C4C61AEAAA6E00B4EF95 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = ../HomePageViewController.h; sourceTree = "<group>"; };
+		D0D0C4C71AEAAA6E00B4EF95 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = ../HomePageViewController.m; sourceTree = "<group>"; };
 		D0E831841AE90246006D088B /* iDatabase Single.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iDatabase Single.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E831881AE90246006D088B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0E831891AE90246006D088B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D0E8318B1AE90246006D088B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0E8318C1AE90246006D088B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D0E831921AE90246006D088B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D0E831941AE90246006D088B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0E831971AE90246006D088B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D0E8319D1AE90246006D088B /* iDatabase SingleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iDatabase SingleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E831A21AE90246006D088B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0E831A31AE90246006D088B /* iDatabase_SingleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDatabase_SingleTests.m; sourceTree = "<group>"; };
 		D0E831AD1AE9066F006D088B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D0E831AE1AE9066F006D088B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		D0E831B01AE90683006D088B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		D0E831B11AE90684006D088B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D0E831B31AE906F2006D088B /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		D0E831B41AE906F2006D088B /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		D0E831B61AE90770006D088B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -91,18 +103,26 @@
 		D0E831861AE90246006D088B /* iDatabase Single */ = {
 			isa = PBXGroup;
 			children = (
+				D0D0C4C61AEAAA6E00B4EF95 /* HomePageViewController.h */,
+				D0D0C4C71AEAAA6E00B4EF95 /* HomePageViewController.m */,
 				D0E8318B1AE90246006D088B /* AppDelegate.h */,
 				D0E8318C1AE90246006D088B /* AppDelegate.m */,
 				D0E831B31AE906F2006D088B /* Database.h */,
 				D0E831B41AE906F2006D088B /* Database.m */,
 				D0E831AD1AE9066F006D088B /* LoginViewController.h */,
 				D0E831AE1AE9066F006D088B /* LoginViewController.m */,
-				D0E831B01AE90683006D088B /* MainViewController.h */,
-				D0E831B11AE90684006D088B /* MainViewController.m */,
-				D0E831941AE90246006D088B /* Images.xcassets */,
 				D0E831911AE90246006D088B /* Main.storyboard */,
+				D0D0C4C31AEAAA3900B4EF95 /* SettingViewController.h */,
+				D0D0C4C41AEAAA3900B4EF95 /* SettingViewController.m */,
+				D0D0C4C01AEAAA2100B4EF95 /* OutletViewController.h */,
+				D0D0C4C11AEAAA2100B4EF95 /* OutletViewController.m */,
+				D0D0C4BD1AEAA9F500B4EF95 /* QueryViewController.h */,
+				D0D0C4BE1AEAA9F500B4EF95 /* QueryViewController.m */,
+				D0D0C4BA1AEAA8CC00B4EF95 /* NewBooksViewController.h */,
+				D0D0C4BB1AEAA8CC00B4EF95 /* NewBooksViewController.m */,
 				D0E831961AE90246006D088B /* LaunchScreen.xib */,
 				D0E831871AE90246006D088B /* Supporting Files */,
+				D0D0C4B81AEAA3F000B4EF95 /* Media.xcassets */,
 			);
 			path = "iDatabase Single";
 			sourceTree = "<group>";
@@ -214,8 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E831931AE90246006D088B /* Main.storyboard in Resources */,
+				D0D0C4B91AEAA3F000B4EF95 /* Media.xcassets in Resources */,
 				D0E831981AE90246006D088B /* LaunchScreen.xib in Resources */,
-				D0E831951AE90246006D088B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,11 +253,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D0C4BC1AEAA8CC00B4EF95 /* NewBooksViewController.m in Sources */,
 				D0E8318D1AE90246006D088B /* AppDelegate.m in Sources */,
+				D0D0C4C81AEAAA6E00B4EF95 /* HomePageViewController.m in Sources */,
+				D0D0C4BF1AEAA9F500B4EF95 /* QueryViewController.m in Sources */,
 				D0E831B51AE906F2006D088B /* Database.m in Sources */,
 				D0E8318A1AE90246006D088B /* main.m in Sources */,
+				D0D0C4C51AEAAA3900B4EF95 /* SettingViewController.m in Sources */,
+				D0D0C4C21AEAAA2100B4EF95 /* OutletViewController.m in Sources */,
 				D0E831AF1AE9066F006D088B /* LoginViewController.m in Sources */,
-				D0E831B21AE90684006D088B /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +458,7 @@
 				D0E831A91AE90246006D088B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0E831AA1AE90246006D088B /* Build configuration list for PBXNativeTarget "iDatabase SingleTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +467,7 @@
 				D0E831AC1AE90246006D088B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
