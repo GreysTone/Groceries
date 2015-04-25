@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 
 extern Database *gtDatabase;
+extern NSString *Login_aId;
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *AdminInTextField;
@@ -25,7 +26,7 @@ extern Database *gtDatabase;
     gtDatabase = [[Database alloc] init];
     [gtDatabase openDb];
     gtDatabase.STAT_NOTIFICATION_OPEN = YES;
-    gtDatabase.STAT_WATCH_OPEN = YES;
+    gtDatabase.STAT_WATCH_OPEN = YES;    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,6 +64,7 @@ extern Database *gtDatabase;
     if ([self.PasswordTextField.text isEqualToString:passWord]) {
         NSLog(@"[SUCC] Login & Triger <LoginSegue>");
         gtDatabase.LoginId = dbId;
+        Login_aId = self.AdminInTextField.text;
         
         [self performSegueWithIdentifier:@"LoginSegue" sender:self];
     }

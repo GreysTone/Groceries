@@ -52,3 +52,4 @@
 @end
 
 Database *gtDatabase;
+NSString *Login_aId;

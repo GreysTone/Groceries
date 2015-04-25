@@ -31,6 +31,21 @@ extern Database *gtDatabase;
     char *errMsg;
     if(sqlite3_exec(gtDatabase->dbPtr, [i1 UTF8String], NULL, NULL, &errMsg) == SQLITE_OK) {
         NSLog(@"[SUCC] Insert Card Data");
+        
+        if([gtDatabase STAT_NOTIFICATION_OPEN]) {
+            //[NSNavBarNotificationView notifyWithText:@"Grumpy wizards" andDetail:@"make a toxic brew"];
+            NSLog(@"STAT");
+            UILocalNotification * notice = [[UILocalNotification alloc] init];
+            [notice setAlertBody:@"Add New Card"];
+            [notice setFireDate:[NSDate date]];
+            
+            if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+                [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound categories:nil]];
+            }
+            [[UIApplication sharedApplication] scheduleLocalNotification:notice];
+            
+        }
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Insert" message:@"Insert Successed." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
