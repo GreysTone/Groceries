@@ -139,17 +139,12 @@
                                     <segment title="Press"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-Yl-Ptq">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Empty Means All" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-Yl-Ptq">
                                 <rect key="frame" x="29" y="98" width="264" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1dD-di-dUo">
-                                <rect key="frame" x="29" y="172" width="127" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9DA-No-tmM">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="&lt;" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9DA-No-tmM">
                                 <rect key="frame" x="164" y="172" width="129" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -168,13 +163,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="&gt;" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1dD-di-dUo">
+                                <rect key="frame" x="29" y="172" width="127" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" title="Query Setting" id="Ee0-Fs-bvi">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="i5B-Ha-ynH"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="i5B-Ha-ynH">
+                            <connections>
+                                <action selector="Query:" destination="C86-wi-7Kn" id="ZzZ-52-RCG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="QueryResultMultiTextField" destination="kbe-hE-r8L" id="n7x-k4-4uf"/>
+                        <outlet property="QuerySettingRange" destination="UQk-x1-atO" id="VqS-Fr-hWI"/>
+                        <outlet property="QuerySettingSingle" destination="9zz-Ne-9jC" id="ltu-Ei-SsN"/>
+                        <outlet property="RangeQueryBeginTextField" destination="1dD-di-dUo" id="uPe-FB-dWF"/>
+                        <outlet property="RangeQueryEndTextField" destination="9DA-No-tmM" id="ZXb-9R-Si8"/>
+                        <outlet property="SingleQueryTextField" destination="xc3-Yl-Ptq" id="hXg-zu-hri"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wX-jg-ep2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,6 +208,9 @@
                                 <rect key="frame" x="106" y="93" width="169" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="CardIdTextFieldChange:" destination="heJ-Qd-jyO" eventType="editingChanged" id="8tB-ca-Q0z"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tgy-et-lK7">
                                 <rect key="frame" x="97" y="193" width="178" height="30"/>
@@ -233,6 +248,9 @@
                                 <state key="normal" title="Check On">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="CheckIdButton:" destination="heJ-Qd-jyO" eventType="touchUpInside" id="drw-mF-B9k"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -244,10 +262,18 @@
                                 <action selector="AddNewCard:" destination="heJ-Qd-jyO" id="s3y-Zm-GTa"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="QGz-NT-TTS"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="QGz-NT-TTS">
+                            <connections>
+                                <action selector="ExecuteButton:" destination="heJ-Qd-jyO" id="aaH-4V-cbG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="CardIdTextField" destination="Cvf-64-Jll" id="tIJ-7W-sTM"/>
+                        <outlet property="FunctionSelector" destination="0L9-IA-Qbw" id="PcO-zl-P0B"/>
+                        <outlet property="ISBNTextField" destination="Tgy-et-lK7" id="HkN-Xx-fsi"/>
+                        <outlet property="ResultTextField" destination="fZ3-nq-ovo" id="mdc-N3-6dH"/>
                         <segue destination="kMQ-OS-dZb" kind="presentation" identifier="AddNewCardSegue" id="8r1-KS-ZCH"/>
                     </connections>
                 </viewController>
@@ -325,6 +351,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="CardCategoryTextField" destination="4EU-zd-TeZ" id="gnw-0Y-wfe"/>
+                        <outlet property="CardIdTextField" destination="ld1-En-fkb" id="Fm2-AK-wkZ"/>
+                        <outlet property="CardUnitTextField" destination="4Xv-sk-evn" id="tkb-3G-knK"/>
+                        <outlet property="UserNameTextField" destination="2n0-Mu-A7V" id="GX1-8C-sBv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOt-wb-Yxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="rXA-q0-FER" userLabel="Exit" sceneMemberID="exit"/>
@@ -503,15 +535,41 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlJ-v0-81G">
-                                <rect key="frame" x="127" y="453" width="104" height="30"/>
+                                <rect key="frame" x="102" y="439" width="104" height="30"/>
                                 <state key="normal" title="Add New Book">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="AddNewBook:" destination="11x-EA-rTC" eventType="touchUpInside" id="wTU-M8-3uv"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Insert:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BR-RQ-DTH">
+                                <rect key="frame" x="55" y="481" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NO INSERT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnK-B8-P82">
+                                <rect key="frame" x="135" y="481" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="New Books" id="NFI-uV-jia"/>
+                    <connections>
+                        <outlet property="AmountTextField" destination="TPn-xk-oRm" id="RZw-Di-cKJ"/>
+                        <outlet property="AuthorTextField" destination="uUX-BK-x7y" id="jp1-nG-64x"/>
+                        <outlet property="CategoryTextField" destination="gsa-qE-1Sd" id="39C-As-Kbs"/>
+                        <outlet property="ISBNTextField" destination="Kvt-Xi-gXi" id="M2m-Y9-9iI"/>
+                        <outlet property="InsertSTAT" destination="fnK-B8-P82" id="BKW-tg-ydt"/>
+                        <outlet property="NameTextField" destination="wln-iX-xyf" id="m7l-6X-JWp"/>
+                        <outlet property="PressTextField" destination="62D-HD-sZ9" id="n9Z-CJ-Y9t"/>
+                        <outlet property="PriceTextField" destination="wUb-3k-H39" id="02D-cQ-uDt"/>
+                        <outlet property="YearTextField" destination="Zx2-UK-RnD" id="9Ja-mq-rcb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzy-7x-gif" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

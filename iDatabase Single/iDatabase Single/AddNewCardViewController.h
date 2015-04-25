@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Database.h"
 
 @interface AddNewCardViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *CardIdTextField;
+@property (weak, nonatomic) IBOutlet UITextField *UserNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *CardUnitTextField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *CardCategoryTextField;
 
 @end
