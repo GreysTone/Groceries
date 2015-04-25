@@ -36,7 +36,7 @@ extern NSString *Login_aId;
 
 - (IBAction) LoginButtonPressed:(id)sender {
     //Debug Using
-    [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+    //[self performSegueWithIdentifier:@"LoginSegue" sender:self];
     //Inquire Password
     NSString *passWord;     //Store Result
     int dbId = 0;

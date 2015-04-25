@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D005CE961AEBD4AB00B06947 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D005CE951AEBD4AB00B06947 /* InterfaceController.m */; };
+		D005CE991AEBD4AB00B06947 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D005CE981AEBD4AB00B06947 /* NotificationController.m */; };
+		D005CE9C1AEBD4AB00B06947 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D005CE9B1AEBD4AB00B06947 /* GlanceController.m */; };
+		D005CE9E1AEBD4AB00B06947 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D005CE9D1AEBD4AB00B06947 /* Images.xcassets */; };
+		D005CEA21AEBD4AB00B06947 /* iDatabase Single WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = D005CEA11AEBD4AB00B06947 /* iDatabase Single WatchKit App.app */; };
+		D005CEAA1AEBD4AB00B06947 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D005CEA81AEBD4AB00B06947 /* Interface.storyboard */; };
+		D005CEAC1AEBD4AB00B06947 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D005CEAB1AEBD4AB00B06947 /* Images.xcassets */; };
+		D005CEAF1AEBD4AB00B06947 /* iDatabase Single WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D005CE8F1AEBD4AB00B06947 /* iDatabase Single WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D0D0C4B91AEAA3F000B4EF95 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D0C4B81AEAA3F000B4EF95 /* Media.xcassets */; };
 		D0D0C4BC1AEAA8CC00B4EF95 /* NewBooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4BB1AEAA8CC00B4EF95 /* NewBooksViewController.m */; };
 		D0D0C4BF1AEAA9F500B4EF95 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4BE1AEAA9F500B4EF95 /* QueryViewController.m */; };
@@ -25,6 +33,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D005CEA31AEBD4AB00B06947 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0E8317C1AE90246006D088B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D005CEA01AEBD4AB00B06947;
+			remoteInfo = "iDatabase Single WatchKit App";
+		};
+		D005CEAD1AEBD4AB00B06947 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0E8317C1AE90246006D088B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D005CE8E1AEBD4AB00B06947;
+			remoteInfo = "iDatabase Single WatchKit Extension";
+		};
 		D0E8319E1AE90246006D088B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D0E8317C1AE90246006D088B /* Project object */;
@@ -34,7 +56,35 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D005CEB61AEBD4AB00B06947 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D005CEAF1AEBD4AB00B06947 /* iDatabase Single WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D005CE8F1AEBD4AB00B06947 /* iDatabase Single WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iDatabase Single WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D005CE921AEBD4AB00B06947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D005CE931AEBD4AB00B06947 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D005CE941AEBD4AB00B06947 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		D005CE951AEBD4AB00B06947 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		D005CE971AEBD4AB00B06947 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		D005CE981AEBD4AB00B06947 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		D005CE9A1AEBD4AB00B06947 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		D005CE9B1AEBD4AB00B06947 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		D005CE9D1AEBD4AB00B06947 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D005CEA11AEBD4AB00B06947 /* iDatabase Single WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iDatabase Single WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D005CEA71AEBD4AB00B06947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D005CEA91AEBD4AB00B06947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D005CEAB1AEBD4AB00B06947 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0D0C4B81AEAA3F000B4EF95 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		D0D0C4BA1AEAA8CC00B4EF95 /* NewBooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewBooksViewController.h; sourceTree = "<group>"; };
 		D0D0C4BB1AEAA8CC00B4EF95 /* NewBooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewBooksViewController.m; sourceTree = "<group>"; };
@@ -66,6 +116,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D005CE8C1AEBD4AB00B06947 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0E831811AE90246006D088B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -84,12 +141,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D005CE901AEBD4AB00B06947 /* iDatabase Single WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D005CE941AEBD4AB00B06947 /* InterfaceController.h */,
+				D005CE951AEBD4AB00B06947 /* InterfaceController.m */,
+				D005CE971AEBD4AB00B06947 /* NotificationController.h */,
+				D005CE981AEBD4AB00B06947 /* NotificationController.m */,
+				D005CE9A1AEBD4AB00B06947 /* GlanceController.h */,
+				D005CE9B1AEBD4AB00B06947 /* GlanceController.m */,
+				D005CE9D1AEBD4AB00B06947 /* Images.xcassets */,
+				D005CE911AEBD4AB00B06947 /* Supporting Files */,
+			);
+			path = "iDatabase Single WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D005CE911AEBD4AB00B06947 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D005CE921AEBD4AB00B06947 /* Info.plist */,
+				D005CE931AEBD4AB00B06947 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D005CEA51AEBD4AB00B06947 /* iDatabase Single WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D005CEA81AEBD4AB00B06947 /* Interface.storyboard */,
+				D005CEAB1AEBD4AB00B06947 /* Images.xcassets */,
+				D005CEA61AEBD4AB00B06947 /* Supporting Files */,
+			);
+			path = "iDatabase Single WatchKit App";
+			sourceTree = "<group>";
+		};
+		D005CEA61AEBD4AB00B06947 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D005CEA71AEBD4AB00B06947 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D0E8317B1AE90246006D088B = {
 			isa = PBXGroup;
 			children = (
 				D0E831B61AE90770006D088B /* libsqlite3.dylib */,
 				D0E831861AE90246006D088B /* iDatabase Single */,
 				D0E831A01AE90246006D088B /* iDatabase SingleTests */,
+				D005CE901AEBD4AB00B06947 /* iDatabase Single WatchKit Extension */,
+				D005CEA51AEBD4AB00B06947 /* iDatabase Single WatchKit App */,
 				D0E831851AE90246006D088B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +200,8 @@
 			children = (
 				D0E831841AE90246006D088B /* iDatabase Single.app */,
 				D0E8319D1AE90246006D088B /* iDatabase SingleTests.xctest */,
+				D005CE8F1AEBD4AB00B06947 /* iDatabase Single WatchKit Extension.appex */,
+				D005CEA11AEBD4AB00B06947 /* iDatabase Single WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +264,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D005CE8E1AEBD4AB00B06947 /* iDatabase Single WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D005CEB51AEBD4AB00B06947 /* Build configuration list for PBXNativeTarget "iDatabase Single WatchKit Extension" */;
+			buildPhases = (
+				D005CE8B1AEBD4AB00B06947 /* Sources */,
+				D005CE8C1AEBD4AB00B06947 /* Frameworks */,
+				D005CE8D1AEBD4AB00B06947 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D005CEA41AEBD4AB00B06947 /* PBXTargetDependency */,
+			);
+			name = "iDatabase Single WatchKit Extension";
+			productName = "iDatabase Single WatchKit Extension";
+			productReference = D005CE8F1AEBD4AB00B06947 /* iDatabase Single WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		D005CEA01AEBD4AB00B06947 /* iDatabase Single WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D005CEB41AEBD4AB00B06947 /* Build configuration list for PBXNativeTarget "iDatabase Single WatchKit App" */;
+			buildPhases = (
+				D005CE9F1AEBD4AB00B06947 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iDatabase Single WatchKit App";
+			productName = "iDatabase Single WatchKit App";
+			productReference = D005CEA11AEBD4AB00B06947 /* iDatabase Single WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		D0E831831AE90246006D088B /* iDatabase Single */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0E831A71AE90246006D088B /* Build configuration list for PBXNativeTarget "iDatabase Single" */;
@@ -168,10 +304,12 @@
 				D0E831801AE90246006D088B /* Sources */,
 				D0E831811AE90246006D088B /* Frameworks */,
 				D0E831821AE90246006D088B /* Resources */,
+				D005CEB61AEBD4AB00B06947 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D005CEAE1AEBD4AB00B06947 /* PBXTargetDependency */,
 			);
 			name = "iDatabase Single";
 			productName = "iDatabase Single";
@@ -205,6 +343,12 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = GreysTone;
 				TargetAttributes = {
+					D005CE8E1AEBD4AB00B06947 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					D005CEA01AEBD4AB00B06947 = {
+						CreatedOnToolsVersion = 6.3;
+					};
 					D0E831831AE90246006D088B = {
 						CreatedOnToolsVersion = 6.3;
 					};
@@ -229,11 +373,31 @@
 			targets = (
 				D0E831831AE90246006D088B /* iDatabase Single */,
 				D0E8319C1AE90246006D088B /* iDatabase SingleTests */,
+				D005CE8E1AEBD4AB00B06947 /* iDatabase Single WatchKit Extension */,
+				D005CEA01AEBD4AB00B06947 /* iDatabase Single WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D005CE8D1AEBD4AB00B06947 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D005CEA21AEBD4AB00B06947 /* iDatabase Single WatchKit App.app in Resources */,
+				D005CE9E1AEBD4AB00B06947 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D005CE9F1AEBD4AB00B06947 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D005CEAA1AEBD4AB00B06947 /* Interface.storyboard in Resources */,
+				D005CEAC1AEBD4AB00B06947 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0E831821AE90246006D088B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +418,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D005CE8B1AEBD4AB00B06947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D005CE991AEBD4AB00B06947 /* NotificationController.m in Sources */,
+				D005CE961AEBD4AB00B06947 /* InterfaceController.m in Sources */,
+				D005CE9C1AEBD4AB00B06947 /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0E831801AE90246006D088B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,6 +456,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D005CEA41AEBD4AB00B06947 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D005CEA01AEBD4AB00B06947 /* iDatabase Single WatchKit App */;
+			targetProxy = D005CEA31AEBD4AB00B06947 /* PBXContainerItemProxy */;
+		};
+		D005CEAE1AEBD4AB00B06947 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D005CE8E1AEBD4AB00B06947 /* iDatabase Single WatchKit Extension */;
+			targetProxy = D005CEAD1AEBD4AB00B06947 /* PBXContainerItemProxy */;
+		};
 		D0E8319F1AE90246006D088B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D0E831831AE90246006D088B /* iDatabase Single */;
@@ -290,6 +474,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D005CEA81AEBD4AB00B06947 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D005CEA91AEBD4AB00B06947 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		D0E831911AE90246006D088B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -309,6 +501,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D005CEB01AEBD4AB00B06947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iDatabase Single WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D005CEB11AEBD4AB00B06947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "iDatabase Single WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D005CEB21AEBD4AB00B06947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = iDatabase_Single_WatchKit_Extension;
+				INFOPLIST_FILE = "iDatabase Single WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		D005CEB31AEBD4AB00B06947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = iDatabase_Single_WatchKit_Extension;
+				INFOPLIST_FILE = "iDatabase Single WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		D0E831A51AE90246006D088B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -448,6 +696,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D005CEB41AEBD4AB00B06947 /* Build configuration list for PBXNativeTarget "iDatabase Single WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D005CEB21AEBD4AB00B06947 /* Debug */,
+				D005CEB31AEBD4AB00B06947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D005CEB51AEBD4AB00B06947 /* Build configuration list for PBXNativeTarget "iDatabase Single WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D005CEB01AEBD4AB00B06947 /* Debug */,
+				D005CEB11AEBD4AB00B06947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D0E8317F1AE90246006D088B /* Build configuration list for PBXProject "iDatabase Single" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
