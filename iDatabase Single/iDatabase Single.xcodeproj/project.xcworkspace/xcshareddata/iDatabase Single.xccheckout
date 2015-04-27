@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6DA452EE-069D-4286-ADB5-2899EB4F9141</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>iDatabase Single</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>287D670CA1222E66C8BEFFA38C8295039F379E09</key>
 		<string>https://github.com/GreysTone/Groceries.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iDatabase Single/iDatabase Single.xcodeproj/project.xcworkspace</string>
+	<string>iDatabase Single/iDatabase Single.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>287D670CA1222E66C8BEFFA38C8295039F379E09</key>

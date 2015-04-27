@@ -70,6 +70,9 @@ extern NSString *Login_aId;
     }
     else {
         NSLog(@"[FAIL] Bad id or password");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login" message:@"Bad Id or Password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+
     }
 }
 
