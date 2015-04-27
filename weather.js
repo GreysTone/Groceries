@@ -7,10 +7,10 @@ res.WeatherStr = "";
 res.WindDir_Speed = "220/004";
 res.CompWindDir_Speed = "";
 
-res.Lat = "";
-res.Long = "";
+res.Lat = "0712.50N";
+res.Long = "07205.50W";
 res.CompLat = "5L!!";
-res.CompLong = "<*e7";
+res.CompLong = "";//"<*e7";
 res.AprsSoft = "w";
 res.WeatherUnit = "RSW";
 res.ObjectName = "";
@@ -65,29 +65,32 @@ if(tStr.length == 7) {
     //console.log(tail);
     switch (tail) {
         case 'z':
+            time.Type = 1;
             time.Month = d.getUTCMonth() + 1;
-            time.Day = tStr.slice(0, 2);
-            time.Hour = tStr.slice(2, 4);
-            time.Min = tStr.slice(4, 6);
+            time.Day = parseInt(tStr.slice(0, 2));
+            time.Hour = parseInt(tStr.slice(2, 4));
+            time.Min = parseInt(tStr.slice(4, 6));
             break;
         case '/':
+            time.Type = 2;
             time.Month = d.getMonth() + 1;
-            time.Day = tStr.slice(0, 2);
-            time.Hour = tStr.slice(2, 4);
-            time.Min = tStr.slice(4, 6);
+            time.Day = parseInt(tStr.slice(0, 2));
+            time.Hour = parseInt(tStr.slice(2, 4));
+            time.Min = parseInt(tStr.slice(4, 6));
             break;
         case 'h':
-            time.Hour = tStr.slice(0, 2);
-            time.Min = tStr.slice(2, 4);
-            time.Sec = tStr.slice(4, 6);
+            time.Type = 3;
+            time.Hour = parseInt(tStr.slice(0, 2));
+            time.Min = parseInt(tStr.slice(2, 4));
+            time.Sec = parseInt(tStr.slice(4, 6));
             break;
     }
 } else if(tStr.length == 8) {
     time.Type = 4;
-    time.Month = tStr.slice(0, 2);
-    time.Day = tStr.slice(2, 4);
-    time.Hour = tStr.slice(4, 6);
-    time.Min = tStr.slice(6, 8);
+    time.Month = parseInt(tStr.slice(0, 2));
+    time.Day = parseInt(tStr.slice(2, 4));
+    time.Hour = parseInt(tStr.slice(4, 6));
+    time.Min = parseInt(tStr.slice(6, 8));
 } else {
     console.log('Unknown Data');
 }
@@ -119,22 +122,23 @@ extraStr.WindDir_Speed = res.WindDir_Speed;
 extraStr.CompWindDir_Speed = res.CompWindDir_Speed;
 
 //WindDirection
-wea.WindDirection = wStr.slice(wStr.indexOf('c')+1, wStr.indexOf('c')+4);       // degrees
+wea.WindDirection = parseInt(wStr.slice(wStr.indexOf('c')+1, wStr.indexOf('c')+4));       // degrees
 if(wea.WindDirection == "..." || wea.WindDirection == "   ") wea.WindDirection = 0;
 if(wea.WindDirection == wStr.slice(0, 3)) wea.WindDirection = 0;
-if(extraStr.WindDir_Speed != "") wea.WindDirection = extraStr.WindDir_Speed.slice(0, 3);
+if(extraStr.WindDir_Speed != "") wea.WindDirection = parseInt(extraStr.WindDir_Speed.slice(0, 3));
 if(extraStr.CompWindDir_Speed.charAt(0) >= '!' && extraStr.CompWindDir_Speed.charAt(0) <='z') {
-    wea.WindDirection = (extraStr.CompWindDir_Speed.charCodeAt(0) - 33) * 4;
+    wea.WindDirection = extraStr.CompWindDir_Speed.charCodeAt(0) - 33;
 }
 //WindSpeed
-wea.WindSpeed = wStr.slice(wStr.indexOf('s')+1, wStr.indexOf('s')+4);           // mph
+wea.WindSpeed = parseInt(wStr.slice(wStr.indexOf('s')+1, wStr.indexOf('s')+4));           // mph
 if(wea.WindSpeed == "..." || wea.WindSpeed == "   ") wea.WindSpeed = 0;
 if(wea.WindSpeed == wStr.slice(0, 3)) wea.WindSpeed = 0;
-if(extraStr.WindDir_Speed != "") wea.WindSpeed = extraStr.WindDir_Speed.slice(4, 7);
+if(extraStr.WindDir_Speed != "") wea.WindSpeed = parseInt(extraStr.WindDir_Speed.slice(4, 7));
 if(extraStr.CompWindDir_Speed.charAt(0) >= '!' && extraStr.CompWindDir_Speed.charAt(0) <='z') {
-    pow = 1.00;  eFlag = extraStr.CompWindDir_Speed.charCodeAt(1) - 33;
-    for(i=1; i<= eFlag; i++) pow = pow * 1.08;
-    wea.WindSpeed = pow - 1;
+    pow = 1.00;
+      eFlag = extraStr.CompWindDir_Speed.charCodeAt(1) - 33;
+      for (i = 1; i <= eFlag; i++) pow = pow * 1.08;
+      wea.WindSpeed = pow - 1;
 }
 
 //Latitude
@@ -147,6 +151,16 @@ if(res.CompLat != "") {
     wea.Lat =  90 - (y1 + y2 + y3 + y4) / 380926;
 }
 
+//CORRECTION
+if(res.Lat.slice(7,8) == 'N'){
+    correct = parseInt(res.Lat.slice(0, 2));
+    correct = correct + parseFloat(res.Lat.slice(2, 7)) / 60;
+} else {
+    correct = 0 - res.Lat.slice(0, 2);
+    correct = correct - parseFloat(res.Lat.slice(2, 7)) / 60;
+}
+
+
 //Longtitude
 wea.Long = res.Long;
 if(res.CompLong != "") {
@@ -155,6 +169,15 @@ if(res.CompLong != "") {
     x3 = (res.CompLong.charCodeAt(2)-33) * (91);
     x4 = (res.CompLong.charCodeAt(3)-33) * (1);
     wea.Long =  -180 + (x1 + x2 + x3 + x4) / 190463;
+}
+
+//CORRECTION
+if(res.Long.slice(8,9) == 'E'){
+    correct = parseInt(res.Long.slice(0, 3));
+    correct = correct + parseFloat(res.Long.slice(3, 8)) / 60;
+} else {
+    correct = 0 - res.Long.slice(0, 3);
+    correct = correct - parseFloat(res.Long.slice(3, 8)) / 60;
 }
 
 //AprsSoftware & WeatherUnit
