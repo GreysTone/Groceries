@@ -110,6 +110,27 @@ storm.RadiusTropicalStormWinds = sStr.slice(28,31);
 storm.RadiusWholeGale = sStr.slice(sStr.indexOf('%')+1, sStr.indexOf('%')+4);
 //console.log(storm)
 
+function decodeLat(lat)
+{
+    var lat_final = 90 - ((lat.charCodeAt(0)-33)*Math.pow(91, 3) + (lat.charCodeAt(1)-33)*Math.pow(91, 2) + (lat.charCodeAt(2)-33)*91 + lat.charCodeAt(3)-33) / 380926;
+    return lat_final;
+}
+
+function decodeLong(long)
+{
+    var long_final = -180 + ((long.charCodeAt(0)-33)*Math.pow(91, 3) + (long.charCodeAt(1)-33)*Math.pow(91, 2) + (long.charCodeAt(2)-33)*91 + long.charCodeAt(3)-33) / 190463;
+    return long_final;
+}
+
+function decodeCourse(c){
+    var course_final = (c.charCode-33) * 4;
+    return course_final;
+}
+
+function decodeSpeed(s){
+    var speed_final = Math.pow(1.08,(s.charCode-33))-1;
+    return speed_final;
+}
 
 res.WeatherStr = "c...s   g005t077r000p000P000h50b09900";
 res.WindDir_Speed = ""; //"220/004";
@@ -127,7 +148,8 @@ if(wea.WindDirection == "..." || wea.WindDirection == "   ") wea.WindDirection =
 if(wea.WindDirection == wStr.slice(0, 3)) wea.WindDirection = 0;
 if(extraStr.WindDir_Speed != "") wea.WindDirection = parseInt(extraStr.WindDir_Speed.slice(0, 3));
 if(extraStr.CompWindDir_Speed.charAt(0) >= '!' && extraStr.CompWindDir_Speed.charAt(0) <='z') {
-    wea.WindDirection = extraStr.CompWindDir_Speed.charCodeAt(0) - 33;
+    //wea.WindDirection = extraStr.CompWindDir_Speed.charCodeAt(0) - 33;
+    wea.WindDirection = decodeCourse(extraStr.CompWindDir_Speed.charAt(0));
 }
 //WindSpeed
 wea.WindSpeed = parseInt(wStr.slice(wStr.indexOf('s')+1, wStr.indexOf('s')+4));           // mph
@@ -135,20 +157,23 @@ if(wea.WindSpeed == "..." || wea.WindSpeed == "   ") wea.WindSpeed = 0;
 if(wea.WindSpeed == wStr.slice(0, 3)) wea.WindSpeed = 0;
 if(extraStr.WindDir_Speed != "") wea.WindSpeed = parseInt(extraStr.WindDir_Speed.slice(4, 7));
 if(extraStr.CompWindDir_Speed.charAt(0) >= '!' && extraStr.CompWindDir_Speed.charAt(0) <='z') {
-    pow = 1.00;
-      eFlag = extraStr.CompWindDir_Speed.charCodeAt(1) - 33;
-      for (i = 1; i <= eFlag; i++) pow = pow * 1.08;
-      wea.WindSpeed = pow - 1;
+    //pow = 1.00;
+    //  eFlag = extraStr.CompWindDir_Speed.charCodeAt(1) - 33;
+    //  for (i = 1; i <= eFlag; i++) pow = pow * 1.08;
+    //  wea.WindSpeed = pow - 1;
+    wea.WindDirection = decodeSpeed(extraStr.CompWindDir_Speed.charAt(1)) * 1.151; //knot -> mph
 }
 
 //Latitude
 wea.Lat = res.Lat;
 if(res.CompLat != "") {
-    y1 = (res.CompLat.charCodeAt(0)-33) * (91*91*91);
-    y2 = (res.CompLat.charCodeAt(1)-33) * (91*91);
-    y3 = (res.CompLat.charCodeAt(2)-33) * (91);
-    y4 = (res.CompLat.charCodeAt(3)-33) * (1);
-    wea.Lat =  90 - (y1 + y2 + y3 + y4) / 380926;
+    //y1 = (res.CompLat.charCodeAt(0)-33) * (91*91*91);
+    //y2 = (res.CompLat.charCodeAt(1)-33) * (91*91);
+    //y3 = (res.CompLat.charCodeAt(2)-33) * (91);
+    //y4 = (res.CompLat.charCodeAt(3)-33) * (1);
+    //wea.Lat =  90 - (y1 + y2 + y3 + y4) / 380926;
+    wea.Lat = decodeLat(res.CompLat);
+    console.log(wea.Lat);
 }
 
 //CORRECTION
@@ -164,11 +189,13 @@ if(res.Lat.slice(7,8) == 'N'){
 //Longtitude
 wea.Long = res.Long;
 if(res.CompLong != "") {
-    x1 = (res.CompLong.charCodeAt(0)-33) * (91*91*91);
-    x2 = (res.CompLong.charCodeAt(1)-33) * (91*91);
-    x3 = (res.CompLong.charCodeAt(2)-33) * (91);
-    x4 = (res.CompLong.charCodeAt(3)-33) * (1);
-    wea.Long =  -180 + (x1 + x2 + x3 + x4) / 190463;
+    //x1 = (res.CompLong.charCodeAt(0)-33) * (91*91*91);
+    //x2 = (res.CompLong.charCodeAt(1)-33) * (91*91);
+    //x3 = (res.CompLong.charCodeAt(2)-33) * (91);
+    //x4 = (res.CompLong.charCodeAt(3)-33) * (1);
+    //wea.Long =  -180 + (x1 + x2 + x3 + x4) / 190463;
+    wea.Long = decodeLong(res.CompLat);
+    console.log(wea.Long);
 }
 
 //CORRECTION
