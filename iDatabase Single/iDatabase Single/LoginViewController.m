@@ -14,6 +14,7 @@ extern NSString *Login_aId;
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *AdminInTextField;
 @property (weak, nonatomic) IBOutlet UITextField *PasswordTextField;
+@property (weak, nonatomic) IBOutlet UISwitch *InjectDefence;
 
 
 @end
@@ -44,6 +45,40 @@ extern NSString *Login_aId;
     sql = [sql stringByAppendingString:self.AdminInTextField.text];
     sql = [sql stringByAppendingString:@"'"];
     NSLog(@"%@", sql);
+    if (self.InjectDefence.on) {
+        NSRange rge = [self.AdminInTextField.text rangeOfString:@"or"];
+        if (rge.length>0) {
+            NSLog(@"[FAIL] Injection Detected");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login" message:@"Bad Id or Password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
+        
+        rge = [self.AdminInTextField.text rangeOfString:@"and"];
+        if (rge.length>0) {
+            NSLog(@"[FAIL] Injection Detected");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login" message:@"Bad Id or Password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
+
+        rge = [self.AdminInTextField.text rangeOfString:@"not"];
+        if (rge.length>0) {
+            NSLog(@"[FAIL] Injection Detected");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login" message:@"Bad Id or Password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
+
+        rge = [self.AdminInTextField.text rangeOfString:@"'"];
+        if (rge.length>0) {
+            NSLog(@"[FAIL] Injection Detected");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login" message:@"Bad Id or Password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
+
+    }
     
     sqlite3_stmt *statement;
     if (sqlite3_prepare_v2(gtDatabase->dbPtr, [sql UTF8String], -1, &statement, nil) == SQLITE_OK) {

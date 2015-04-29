@@ -14,7 +14,6 @@ extern Database *gtDatabase;
 
 - (IBAction)SaveNewCard:(id)sender {
     NSLog(@"[SYS]Save Pressed.");
-    
     //cId varchar(20), userName varchar(50), userUnit varchar(50), userCategory integer)
     
     NSString *i1 = @"INSERT INTO Card(cId, userName, userUnit, userCategory) VALUES('";

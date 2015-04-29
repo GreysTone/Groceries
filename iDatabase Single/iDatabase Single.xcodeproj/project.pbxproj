@@ -22,6 +22,9 @@
 		D0D0C4C51AEAAA3900B4EF95 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4C41AEAAA3900B4EF95 /* SettingViewController.m */; };
 		D0D0C4C81AEAAA6E00B4EF95 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4C71AEAAA6E00B4EF95 /* HomePageViewController.m */; };
 		D0D0C4CB1AEAC2AA00B4EF95 /* AddNewCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0C4CA1AEAC2AA00B4EF95 /* AddNewCardViewController.m */; };
+		D0DFF6F11AEF15C400BD1B09 /* ShowAllBookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DFF6F01AEF15C400BD1B09 /* ShowAllBookTableViewController.m */; };
+		D0DFF6F41AEF163300BD1B09 /* BooksTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DFF6F31AEF163300BD1B09 /* BooksTable.m */; };
+		D0DFF6F71AEF65D300BD1B09 /* ShowAllCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DFF6F61AEF65D300BD1B09 /* ShowAllCardTableViewController.m */; };
 		D0E8318A1AE90246006D088B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E831891AE90246006D088B /* main.m */; };
 		D0E8318D1AE90246006D088B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E8318C1AE90246006D088B /* AppDelegate.m */; };
 		D0E831931AE90246006D088B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E831911AE90246006D088B /* Main.storyboard */; };
@@ -98,6 +101,12 @@
 		D0D0C4C71AEAAA6E00B4EF95 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = ../HomePageViewController.m; sourceTree = "<group>"; };
 		D0D0C4C91AEAC2AA00B4EF95 /* AddNewCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewCardViewController.h; sourceTree = "<group>"; };
 		D0D0C4CA1AEAC2AA00B4EF95 /* AddNewCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewCardViewController.m; sourceTree = "<group>"; };
+		D0DFF6EF1AEF15C400BD1B09 /* ShowAllBookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAllBookTableViewController.h; sourceTree = "<group>"; };
+		D0DFF6F01AEF15C400BD1B09 /* ShowAllBookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAllBookTableViewController.m; sourceTree = "<group>"; };
+		D0DFF6F21AEF163300BD1B09 /* BooksTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksTable.h; sourceTree = "<group>"; };
+		D0DFF6F31AEF163300BD1B09 /* BooksTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksTable.m; sourceTree = "<group>"; };
+		D0DFF6F51AEF65D300BD1B09 /* ShowAllCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAllCardTableViewController.h; sourceTree = "<group>"; };
+		D0DFF6F61AEF65D300BD1B09 /* ShowAllCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAllCardTableViewController.m; sourceTree = "<group>"; };
 		D0E831841AE90246006D088B /* iDatabase Single.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iDatabase Single.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E831881AE90246006D088B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0E831891AE90246006D088B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -218,6 +227,8 @@
 				D0E831AD1AE9066F006D088B /* LoginViewController.h */,
 				D0E831AE1AE9066F006D088B /* LoginViewController.m */,
 				D0E831911AE90246006D088B /* Main.storyboard */,
+				D0DFF6F51AEF65D300BD1B09 /* ShowAllCardTableViewController.h */,
+				D0DFF6F61AEF65D300BD1B09 /* ShowAllCardTableViewController.m */,
 				D0D0C4C91AEAC2AA00B4EF95 /* AddNewCardViewController.h */,
 				D0D0C4CA1AEAC2AA00B4EF95 /* AddNewCardViewController.m */,
 				D0D0C4C31AEAAA3900B4EF95 /* SettingViewController.h */,
@@ -227,6 +238,10 @@
 				D0D0C4BD1AEAA9F500B4EF95 /* QueryViewController.h */,
 				D0D0C4BE1AEAA9F500B4EF95 /* QueryViewController.m */,
 				D0D0C4BA1AEAA8CC00B4EF95 /* NewBooksViewController.h */,
+				D0DFF6EF1AEF15C400BD1B09 /* ShowAllBookTableViewController.h */,
+				D0DFF6F01AEF15C400BD1B09 /* ShowAllBookTableViewController.m */,
+				D0DFF6F21AEF163300BD1B09 /* BooksTable.h */,
+				D0DFF6F31AEF163300BD1B09 /* BooksTable.m */,
 				D0D0C4BB1AEAA8CC00B4EF95 /* NewBooksViewController.m */,
 				D0E831961AE90246006D088B /* LaunchScreen.xib */,
 				D0E831871AE90246006D088B /* Supporting Files */,
@@ -433,7 +448,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0D0C4BC1AEAA8CC00B4EF95 /* NewBooksViewController.m in Sources */,
+				D0DFF6F41AEF163300BD1B09 /* BooksTable.m in Sources */,
 				D0E8318D1AE90246006D088B /* AppDelegate.m in Sources */,
+				D0DFF6F11AEF15C400BD1B09 /* ShowAllBookTableViewController.m in Sources */,
 				D0D0C4C81AEAAA6E00B4EF95 /* HomePageViewController.m in Sources */,
 				D0D0C4CB1AEAC2AA00B4EF95 /* AddNewCardViewController.m in Sources */,
 				D0D0C4BF1AEAA9F500B4EF95 /* QueryViewController.m in Sources */,
@@ -441,6 +458,7 @@
 				D0E8318A1AE90246006D088B /* main.m in Sources */,
 				D0D0C4C51AEAAA3900B4EF95 /* SettingViewController.m in Sources */,
 				D0D0C4C21AEAAA2100B4EF95 /* OutletViewController.m in Sources */,
+				D0DFF6F71AEF65D300BD1B09 /* ShowAllCardTableViewController.m in Sources */,
 				D0E831AF1AE9066F006D088B /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,6 +721,7 @@
 				D005CEB31AEBD4AB00B06947 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D005CEB51AEBD4AB00B06947 /* Build configuration list for PBXNativeTarget "iDatabase Single WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -711,6 +730,7 @@
 				D005CEB11AEBD4AB00B06947 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0E8317F1AE90246006D088B /* Build configuration list for PBXProject "iDatabase Single" */ = {
 			isa = XCConfigurationList;

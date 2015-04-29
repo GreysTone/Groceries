@@ -245,5 +245,8 @@ extern NSString *Login_aId;
     }
 }
 
+- (IBAction)ShowAllButton:(id)sender {
+    [self performSegueWithIdentifier:@"ShowAllCardSegue" sender:(self)];
+}
 
 @end

@@ -48,4 +48,12 @@ extern Database *gtDatabase;
     
 }
 
+- (IBAction)ShowAllBook:(id)sender {
+    [self performSegueWithIdentifier:@"ShowAllBookSegue" sender:(self)];
+}
+
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue {
+    
+}
+
 @end
